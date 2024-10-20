@@ -65,3 +65,18 @@ class LEDDisplay extends Observer {
         System.out.println("LED Display - Temperature: " + weatherStation.getTemperature() + ", Humidity: " + weatherStation.getHumidity());
     }
 }
+
+public class ObserverDemo {
+    public static void main(String[] args) {
+        WeatherStation weatherStation = new WeatherStation();
+
+        PhoneDisplay phoneDisplay = new PhoneDisplay(weatherStation);
+        LEDDisplay ledDisplay = new LEDDisplay(weatherStation);
+
+        weatherStation.setTemperature(25.5f);
+        weatherStation.setHumidity(60.0f);
+
+        weatherStation.setTemperature(28.0f);
+        weatherStation.setHumidity(55.0f);
+    }
+}
