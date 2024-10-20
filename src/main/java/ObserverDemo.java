@@ -54,3 +54,14 @@ class PhoneDisplay extends Observer {
         System.out.println("Phone Display - Temperature: " + weatherStation.getTemperature() + ", Humidity: " + weatherStation.getHumidity());
     }
 }
+
+class LEDDisplay extends Observer {
+    public LEDDisplay(WeatherStation weatherStation) {
+        this.weatherStation = weatherStation;
+        this.weatherStation.attach(this);
+    }
+
+    public void update() {
+        System.out.println("LED Display - Temperature: " + weatherStation.getTemperature() + ", Humidity: " + weatherStation.getHumidity());
+    }
+}
