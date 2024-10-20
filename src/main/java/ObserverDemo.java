@@ -35,3 +35,10 @@ class WeatherStation {
         }
     }
 }
+
+// Observer
+abstract class Observer {
+    protected WeatherStation weatherStation;
+
+    public abstract void update();
+}
