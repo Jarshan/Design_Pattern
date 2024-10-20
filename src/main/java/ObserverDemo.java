@@ -42,3 +42,15 @@ abstract class Observer {
 
     public abstract void update();
 }
+
+// Concrete Observers
+class PhoneDisplay extends Observer {
+    public PhoneDisplay(WeatherStation weatherStation) {
+        this.weatherStation = weatherStation;
+        this.weatherStation.attach(this);
+    }
+
+    public void update() {
+        System.out.println("Phone Display - Temperature: " + weatherStation.getTemperature() + ", Humidity: " + weatherStation.getHumidity());
+    }
+}
