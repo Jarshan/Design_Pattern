@@ -53,3 +53,13 @@ class AudioPlayers implements MediaPlayers {
         }
     }
 }
+
+public class AdapterDemo {
+    public static void main(String[] args) {
+        AudioPlayers audioPlayer = new AudioPlayers();
+        audioPlayer.play("mp3", "Despacito");
+        audioPlayer.play("mp4", "Transformer");
+        audioPlayer.play("vlc", "Dynamite");
+        audioPlayer.play("avi", "Let Me Down");
+    }
+}
